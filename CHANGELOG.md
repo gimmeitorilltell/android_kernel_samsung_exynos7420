@@ -1,5 +1,8 @@
 # Change Log
 
+## [v2.3](https://github.com/SM-G920P/TeamSPR/tree/v2.3) (2016-03-04)
+[Full Changelog](https://github.com/SM-G920P/TeamSPR/compare/v2.2...v2.3)
+
 ## [v2.2](https://github.com/SM-G920P/TeamSPR/tree/v2.2) (2016-03-03)
 [Full Changelog](https://github.com/SM-G920P/TeamSPR/compare/v2.1...v2.2)
 
