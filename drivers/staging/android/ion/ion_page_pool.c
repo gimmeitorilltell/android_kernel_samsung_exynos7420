@@ -90,12 +90,12 @@ struct page *ion_page_pool_alloc(struct ion_page_pool *pool)
 
 	BUG_ON(!pool);
 
-	if (mutex_trylock(&pool->mutex)) {
+	if (spin_trylock(&pool->lock)) {
 		if (pool->high_count)
 			page = ion_page_pool_remove(pool, true);
 		else if (pool->low_count)
 			page = ion_page_pool_remove(pool, false);
-		mutex_unlock(&pool->mutex);
+		spin_unlock(&pool->lock);
 	}
 
 	return page;
