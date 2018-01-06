@@ -4021,14 +4021,8 @@ static int hmp_boost_from_sysfs(int value)
 	int ret = 0;
 
 	raw_spin_lock_irqsave(&hmp_boost_lock, flags);
-	if (value == 1)
-		hmp_boost_val++;
-	else if (value == 0)
-		if (hmp_boost_val >= 1)
-			hmp_boost_val--;
-		else
-			ret = -EINVAL;
-	else
+	hmp_boost_val = !!value;
+	if (value != hmp_boost_val)
 		ret = -EINVAL;
 	raw_spin_unlock_irqrestore(&hmp_boost_lock, flags);
 
@@ -4041,14 +4035,8 @@ static int hmp_semiboost_from_sysfs(int value)
 	int ret = 0;
 
 	raw_spin_lock_irqsave(&hmp_semiboost_lock, flags);
-	if (value == 1)
-		hmp_semiboost_val++;
-	else if (value == 0)
-		if (hmp_semiboost_val >= 1)
-			hmp_semiboost_val--;
-		else
-			ret = -EINVAL;
-	else
+	hmp_semiboost_val = !!value;
+	if (value != hmp_semiboost_val)
 		ret = -EINVAL;
 	raw_spin_unlock_irqrestore(&hmp_semiboost_lock, flags);
 
