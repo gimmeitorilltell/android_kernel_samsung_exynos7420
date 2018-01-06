@@ -3737,9 +3737,7 @@ static inline int hmp_boost(void)
 
 static inline int hmp_semiboost(void)
 {
-	if (hmp_semiboost_val)
-		return 1;
-	return 0;
+	return !!hmp_semiboost_val;
 }
 
 static unsigned int hmp_up_migration(int cpu, int *target_cpu, struct sched_entity *se);
