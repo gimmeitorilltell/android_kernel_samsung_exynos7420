@@ -164,9 +164,6 @@ obj-$(CONFIG_VME_BUS)		+= vme/
 obj-$(CONFIG_IPACK_BUS)		+= ipack/
 obj-$(CONFIG_NTB)		+= ntb/
 
-# Mobicore driver
-obj-$(CONFIG_MOBICORE_DRIVER)   += gud/
-
 #Sensorhub
 obj-$(CONFIG_SENSORS_SSP)	+= sensorhub/
 obj-$(CONFIG_SENSORS_CORE)	+= sensors/
