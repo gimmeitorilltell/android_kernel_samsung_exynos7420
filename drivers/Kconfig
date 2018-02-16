@@ -195,6 +195,8 @@ source "drivers/gps/Kconfig"
 
 source "drivers/fingerprint/Kconfig"
 
+source "drivers/gud/Kconfig"
+
 source "drivers/gator/Kconfig"
 
 source "drivers/trace/Kconfig"
